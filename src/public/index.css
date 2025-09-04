@@ -132,6 +132,20 @@
   column-gap: 10px;
 }
 
+#message {
+  padding: 10px;
+  border-radius: 5px;
+  border-color: rgba(255, 255, 255, 0.35);
+  color: gray;
+  width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+}
+
+.form textarea:focus {
+  box-shadow: 0 0 10px;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
