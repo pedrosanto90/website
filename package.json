@@ -7,7 +7,10 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
-    "lint": "eslint 'src/**/*.ts'"
+    "lint": "eslint 'src/**/*.ts'",
+    "images:opt": "ts-node src/tools/optimize-images.ts",
+    "postinstall": "npm run images:opt || true",
+    "prebuild": "npm run images:opt"
   },
   "keywords": [],
   "author": "Pedro Santo",
@@ -15,12 +18,14 @@
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
+    "@types/sharp": "^0.31.1",
     "eslint": "^9.34.0",
     "express": "^5.1.0",
     "install": "^0.13.0",
     "nodemon": "^3.1.10",
     "npm": "^11.6.0",
     "prettier": "^3.6.2",
+    "sharp": "^0.34.3",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },

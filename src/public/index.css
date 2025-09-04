@@ -6,23 +6,38 @@
 }
 
 .hero {
-  background-image: url(images/0.jpg);
+  background-image: image-set(
+    url(images/0-1280.webp) type("image/webp") 1x,
+    url(images/0-1280.jpg) type("image/jpeg") 1x
+  );
 }
 
 .section1 {
-  background-image: url(images/1.jpg);
+  background-image: image-set(
+    url(images/1-1280.webp) type("image/webp") 1x,
+    url(images/1-1280.jpg) type("image/jpeg") 1x
+  );
 }
 
 .section3 {
-  background-image: url(images/2.jpg);
+  background-image: image-set(
+    url(images/2-1280.webp) type("image/webp") 1x,
+    url(images/2-1280.jpg) type("image/jpeg") 1x
+  );
 }
 
 .section4 {
-  background-image: url(images/4.jpg);
+  background-image: image-set(
+    url(images/4-1280.webp) type("image/webp") 1x,
+    url(images/4-1280.jpg) type("image/jpeg") 1x
+  );
 }
 
 .section5 {
-  background-image: url(images/5.jpg);
+  background-image: image-set(
+    url(images/5-1280.webp) type("image/webp") 1x,
+    url(images/5-1280.jpg) type("image/jpeg") 1x
+  );
 }
 
 .parallax {
@@ -38,7 +53,7 @@
 }
 
 .hero p {
-  font-size: 12vw;
+  font-size: clamp(32px, 12vw, 120px);
   color: rgba(255, 255, 255, 0.35);
   text-decoration: underline;
 }
@@ -91,8 +106,11 @@
 
 .form {
   display: grid;
-  grid-template-columns: 400px;
+  grid-template-columns: 1fr;
   row-gap: 10px;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .form input {
@@ -100,6 +118,8 @@
   border-radius: 5px;
   border-color: rgba(255, 255, 255, 0.35);
   color: gray;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form input:focus {
@@ -117,7 +137,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 25vh;
+  height: auto;
   /* grid-template-columns: 0fr 1fr 0fr; */
   padding: 3em 6em;
 }
@@ -147,7 +167,17 @@
 .copy {
   color: rgb(220, 220, 220);
   margin: 10px;
-k
+}
+
+/* Responsividade geral */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 2.5em 4em;
+  }
+  .wb_container,
+  .white_box {
+    padding: 2.5em 4em;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -158,5 +188,95 @@ k
     grid-template-columns: 1fr;
     grid-template-rows: 100% 100%;
     gap: 20px;
+  }
+  .hero {
+    background-image: image-set(
+      url(images/0-768.webp) type("image/webp") 1x,
+      url(images/0-768.jpg) type("image/jpeg") 1x
+    );
+  }
+  .section1 {
+    background-image: image-set(
+      url(images/1-768.webp) type("image/webp") 1x,
+      url(images/1-768.jpg) type("image/jpeg") 1x
+    );
+  }
+  .section3 {
+    background-image: image-set(
+      url(images/2-768.webp) type("image/webp") 1x,
+      url(images/2-768.jpg) type("image/jpeg") 1x
+    );
+  }
+  .section4 {
+    background-image: image-set(
+      url(images/4-768.webp) type("image/webp") 1x,
+      url(images/4-768.jpg) type("image/jpeg") 1x
+    );
+  }
+  .section5 {
+    background-image: image-set(
+      url(images/5-768.webp) type("image/webp") 1x,
+      url(images/5-768.jpg) type("image/jpeg") 1x
+    );
+  }
+  .container {
+    padding: 2em 1.5em;
+  }
+  .wb_container,
+  .white_box {
+    padding: 2em 1.5em;
+  }
+  .columns ul {
+    padding: 10px 0 0 0;
+  }
+  .footer {
+    padding: 2em 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero p {
+    font-size: clamp(28px, 14vw, 72px);
+  }
+  .hero {
+    background-image: image-set(
+      url(images/0-480.webp) type("image/webp") 1x,
+      url(images/0-480.jpg) type("image/jpeg") 1x
+    );
+  }
+  .section1 {
+    background-image: image-set(
+      url(images/1-480.webp) type("image/webp") 1x,
+      url(images/1-480.jpg) type("image/jpeg") 1x
+    );
+  }
+  .section3 {
+    background-image: image-set(
+      url(images/2-480.webp) type("image/webp") 1x,
+      url(images/2-480.jpg) type("image/jpeg") 1x
+    );
+  }
+  .section4 {
+    background-image: image-set(
+      url(images/4-480.webp) type("image/webp") 1x,
+      url(images/4-480.jpg) type("image/jpeg") 1x
+    );
+  }
+  .section5 {
+    background-image: image-set(
+      url(images/5-480.webp) type("image/webp") 1x,
+      url(images/5-480.jpg) type("image/jpeg") 1x
+    );
+  }
+  .container {
+    padding: 1.5em 1em;
+  }
+  .wb_container,
+  .white_box {
+    padding: 1.5em 1em;
+  }
+  .b_form {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
   }
 }
