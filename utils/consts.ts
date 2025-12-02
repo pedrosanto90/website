@@ -3,7 +3,7 @@ const data = {
     name: "Pedro Santo",
     full_name: "Pedro Filipe Duarte do Espirito Santo",
     title: "Full-Stack Developer",
-    email: 'pedro@email.com',
+    email: 'pedro.esanto@outlook.com',
     descrition: "Building modern, scalable web applications with clean code and attention to detail. Available for freelance projects."
   },
   contacts: {
