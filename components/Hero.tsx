@@ -33,7 +33,7 @@ export default function Hero() {
           </a>
           <a 
             href="#blog" 
-            className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors font-medium"
+            className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors font-medium hidden"
           >
             Blog
           </a>
