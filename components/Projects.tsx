@@ -5,7 +5,7 @@ import ProjectCard from "./ui/ProjectCard";
 export default function Projects() {
   const projectList = projects.projects;
   return (
-      <section id="projects" className="py-20 bg-white">
+      <section id="projects" className="py-20 bg-white hidden">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">

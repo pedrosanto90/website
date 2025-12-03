@@ -32,8 +32,8 @@ export default function Hero() {
             View Projects
           </a>
           <a 
-            href="#blog" 
-            className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors font-medium hidden"
+            href="/blog" 
+            className="px-8 py-3 border-2 border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors font-medium"
           >
             Blog
           </a>

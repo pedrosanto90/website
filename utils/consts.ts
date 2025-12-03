@@ -29,5 +29,10 @@ const data = {
     'Git',
     'REST APIs',
   ],
+  blog: {
+    title: "Blog",
+    sub_title: "Pedro Espirito Santo",
+    description: "Welcome to the blog page! Here you'll find articles and updates.",
+  }
 }
 export default data;
