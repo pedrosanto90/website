@@ -3,8 +3,9 @@ const data = {
     name: "Pedro Santo",
     full_name: "Pedro Filipe Duarte do Espirito Santo",
     title: "Full-Stack Developer",
-    email: 'pedro.esanto@outlook.com',
-    descrition: "Building modern, scalable web applications with clean code and attention to detail. Available for freelance projects."
+    email: "pedro.esanto@outlook.com",
+    descrition:
+      "Building modern, scalable web applications with clean code and attention to detail. Available for freelance projects.",
   },
   contacts: {
     github: "https://github.com/pedrosanto90",
@@ -12,22 +13,24 @@ const data = {
     email: "pedro.esanto@outlook.com",
   },
   about: {
-    first_line: 'I&apos;m a passionate software developer with expertise in building modern web applications. I specialize in creating clean, efficient, and user-friendly solutions that help businesses grow.',
-    second_line: 'With a focus on quality and attention to detail, I work closely with clients to understand their needs and deliver solutions that exceed expectations.'
+    first_line:
+      "I'm a passionate software developer with expertise in building modern web applications. I specialize in creating clean, efficient, and user-friendly solutions that help businesses grow.",
+    second_line:
+      "With a focus on quality and attention to detail, I work closely with clients to understand their needs and deliver solutions that exceed expectations.",
   },
-  skills:[
-    'HTML',
-    'CSS',
-    'TypeScript',
-    'Node.js',
-    'PostgreSQL',
-    'React',
-    'Next.js',
-    'Angular',
-    'NestJS',
-    'Tailwind CSS',
-    'Git',
-    'REST APIs',
+  skills: [
+    "HTML",
+    "CSS",
+    "TypeScript",
+    "Node.js",
+    "PostgreSQL",
+    "React",
+    "Next.js",
+    "Angular",
+    "NestJS",
+    "Tailwind CSS",
+    "Git",
+    "REST APIs",
   ],
-}
+};
 export default data;
