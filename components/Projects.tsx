@@ -1,3 +1,5 @@
+"use client";
+
 import projects from "../utils/projects";
 import ProjectCard from "./ui/ProjectCard";
 

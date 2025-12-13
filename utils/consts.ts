@@ -14,7 +14,8 @@ const data = {
   },
   about: {
     first_line:
-      "I&apos;m a passionate software developer with expertise in building modern web applications. I specialize in creating clean, efficient, and user-friendly solutions that help businesses grow.",
+      "I'm a passionate software developer with expertise in building modern web applications. I specialize in creating clean, efficient, and user-friendly solutions that help businesses grow.",
+      "I'm a passionate software developer with expertise in building modern web applications. I specialize in creating clean, efficient, and user-friendly solutions that help businesses grow.",
     second_line:
       "With a focus on quality and attention to detail, I work closely with clients to understand their needs and deliver solutions that exceed expectations.",
   },
