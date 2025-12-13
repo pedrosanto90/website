@@ -1,6 +1,7 @@
 import posts from "../posts/posts";
+import Link from "next/link";
 
-export default function BlogPosts() {
+export default function PostCard() {
   const blogPosts = posts || [];
   return (
     <div className="container mx-auto px-6 py-10 flex flex-col content-left items-center">
@@ -9,7 +10,8 @@ export default function BlogPosts() {
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
             {post.title}
           </h2>
-          <p className="text-gray-700 mb-4">{post.content}</p>
+          <h3 className="text-xl text-gray-600 mb-2">{post.description}</h3>
+          <p className="text-gray-700 mb-4 hidden">{post.content}</p>
           <div className="flex flex-wrap gap-2">
             {post.tags.map((tag, tagIndex) => (
               <span
@@ -21,6 +23,12 @@ export default function BlogPosts() {
             ))}
           </div>
           <p className="text-gray-700 mt-4">{post.date}</p>
+          <Link
+            href={`/blog/${post.id}`}
+            className="text-blue-600 hover:underline"
+          >
+            Read More
+          </Link>
         </div>
       ))}
     </div>
