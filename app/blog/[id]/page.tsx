@@ -1,12 +1,7 @@
 "use client";
 import posts from "@/posts/posts";
 import { useParams } from "next/navigation";
-
-interface PostPageProps {
-  params: {
-    id: string;
-  };
-}
+import siteContent from "@/data/content";
 
 export default function PostPage() {
   const params = useParams();
@@ -15,7 +10,9 @@ export default function PostPage() {
   if (!post) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-50 to-white">
-        <h1 className="text-4xl font-bold text-gray-800">Post not found</h1>
+        <h1 className="text-4xl font-bold text-gray-800">
+          {siteContent.blog.notFoundTitle}
+        </h1>
       </div>
     );
   }

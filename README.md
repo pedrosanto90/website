@@ -35,3 +35,43 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Contact Form Setup
+
+Create a `.env.local` file based on `.env.example` and fill in your SMTP credentials:
+
+```bash
+cp .env.example .env.local
+```
+
+Required keys:
+- `SMTP_HOST`
+- `SMTP_PORT`
+- `SMTP_USER`
+- `SMTP_PASS`
+- `CONTACT_TO`
+- `CONTACT_FROM`
+- `CONTACT_FROM_NAME`
+- `CONTACT_FORM_ENABLED`
+- `CONTACT_RATE_LIMIT_WINDOW_SECONDS`
+- `CONTACT_RATE_LIMIT_MAX_REQUESTS`
+
+### Test the API endpoint
+
+```bash
+curl -X POST http://localhost:3000/api/contact \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Jane Doe","email":"jane@example.com","message":"Hello from the contact form!"}'
+```
+
+Expected response:
+
+```json
+{ "ok": true }
+```
+
+### Test in the browser
+
+1. Run `npm run dev`.
+2. Open `http://localhost:3000` and submit the contact form.
+3. Confirm you receive the email and can reply directly to the sender.

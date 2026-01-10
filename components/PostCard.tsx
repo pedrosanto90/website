@@ -1,5 +1,6 @@
 import posts from "../posts/posts";
 import Link from "next/link";
+import siteContent from "@/data/content";
 
 export default function PostCard() {
   const blogPosts = posts || [];
@@ -27,7 +28,7 @@ export default function PostCard() {
             href={`/blog/${post.id}`}
             className="text-blue-600 hover:underline"
           >
-            Read More
+            {siteContent.blog.readMoreLabel}
           </Link>
         </div>
       ))}

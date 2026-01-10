@@ -2,6 +2,7 @@
 
 import projects from "../utils/projects";
 import ProjectCard from "./ui/ProjectCard";
+import siteContent from "@/data/content";
 
 export default function Projects() {
   const projectList = projects.projects;
@@ -10,7 +11,7 @@ export default function Projects() {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-            Featured Projects
+            {siteContent.projects.title}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projectList.map((project, index) => (
