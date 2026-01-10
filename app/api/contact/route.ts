@@ -54,7 +54,7 @@ const getClientIp = (request: NextRequest) => {
     return realIp;
   }
 
-  return request.ip ?? "unknown";
+  return "unknown";
 };
 
 const isRateLimited = (ip: string) => {
@@ -94,10 +94,8 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const honeypot =
-    typeof (payload as { honeypot?: string }).honeypot === "string"
-      ? (payload as { honeypot?: string }).honeypot
-      : "";
+  const rawHoneypot = (payload as { honeypot?: unknown }).honeypot;
+  const honeypot = typeof rawHoneypot === "string" ? rawHoneypot : "";
 
   if (honeypot.trim().length > 0) {
     return NextResponse.json({ ok: true }, { status: 200 });
