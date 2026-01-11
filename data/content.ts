@@ -82,7 +82,7 @@ const siteContent = {
       messagePlaceholder: "Goals, timeline, budget range, preferred stack...",
       submitLabel: "Send inquiry",
       sendingLabel: "Sending...",
-      successMessage: "Obrigado, vou responder pessoalmente.",
+      successMessage: "Email Sent.",
       errorMessage: "Please check your details and try again.",
       invalidMessage: "Please check your details and try again.",
       trustNote: "Response within 24-48 business hours.",
